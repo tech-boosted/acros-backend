@@ -4,7 +4,8 @@ const dotenv = require("dotenv");
 const connectDatabase = require("./database/connect");
 
 // config for env variables
-dotenv.config({ path: "./config/config.env" });
+// dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: ".env" });
 
 // database connection
 connectDatabase();

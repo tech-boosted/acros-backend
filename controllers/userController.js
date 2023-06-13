@@ -47,7 +47,7 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
       message: "Invalid id and password",
     });
   }
-  if (id === "techOne@boosted.in" && password === "password123") {
+  if (id === user.id && password === user.password) {
     sendToken(user, 200, res);
   } else {
     res.status(404).json({

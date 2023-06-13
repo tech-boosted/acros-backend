@@ -19,4 +19,10 @@ app.use("/api/v1", formRoutes);
 app.use("/api/v1", resourceRoutes);
 app.use("/api/v1", careerRoutes);
 app.use("/api/v1", userRoutes);
+
+app.use(express.static('/build'));
+app.get('*', (req,res) =>{
+    res.sendFile('/build/index.html');
+});
+
 module.exports = app;
